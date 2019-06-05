@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class StaticPagesController < Manager::BaseController
   def index
   end
 end
