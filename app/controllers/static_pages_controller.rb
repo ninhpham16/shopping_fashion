@@ -1,4 +1,3 @@
 class StaticPagesController < Manager::BaseController
-  def index
-  end
+  def index; end
 end
