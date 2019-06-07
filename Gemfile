@@ -30,6 +30,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
   gem "rubocop-rails", require: false
+  gem "rubocop"
   gem "shoulda-matchers"
 end
 
