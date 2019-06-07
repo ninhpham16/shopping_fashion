@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 git_source(:github) do |repo_name|
@@ -25,7 +27,7 @@ gem "font-awesome-sass", "~> 5.8.1"
 group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
-  gem "rubocop", '~> 0.5.0', require: false
+  gem "rubocop-rails", require: false
   gem "shoulda-matchers"
 end
 
@@ -36,5 +38,5 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "slim-rails"

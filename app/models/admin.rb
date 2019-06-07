@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Admin < ApplicationRecord
-  enum role: [:admin, :contributor]
+  enum role: %i[admin contributor]
 
   validates :user_name, presence: true, length: { minimum: 4, maximum: 10 }
 
