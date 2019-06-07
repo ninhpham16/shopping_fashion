@@ -1,5 +1,8 @@
 nav.navbar.navbar-expand.navbar-light.bg-white.topbar.mb-4.static-top.shadow
   div.navbar-nav.ml-auto
-    div.mr-2.d-none.d-lg-inline.text-gray-600.small.fas.fa-user  Administrator
-    div.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2
-      a.text-gray-400 href="#" Logout
+      .dropdown
+        button.btn.btn-primary.dropdown-toggle data-toggle="dropdown" type="button" 
+          | Account
+        .dropdown-menu
+          = link_to "#{current_admin.user_name}", current_admin.user_name, class: "dropdown-item"
+          = link_to "Log out", destroy_admin_session_path, method: :delete, class: "dropdown-item"
