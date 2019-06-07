@@ -24,6 +24,8 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "font-awesome-sass", "~> 5.8.1"
 gem "faker"
+gem "kaminari"
+
 group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
