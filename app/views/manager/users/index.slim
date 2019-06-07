@@ -1,0 +1,53 @@
+.container-fluid
+ .card.shadow.mb-4
+   .card-header.py-3
+     h6.m-0.font-weight-bold.text-primary
+       | All User
+   .card-body
+     .table-responsive
+       #dataTable_wrapper.dataTables_wrapper.dt-bootstrap4
+         .row
+           .col-sm-12.col-md-6
+         .row
+           .col-sm-12
+             table#dataTable.table.table-bordered.dataTable[width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;"]
+               thead
+                 tr[role="row"]
+                   th.sorting_asc[style="width: 280px;"]
+                     | Name
+                   th.sorting[style="width: 1px;"]
+                     | Email
+                   th.sorting[style="width: 250px;"]
+                     | Full Name
+                   th.sorting[style="width: 50px;"]
+                     | Phone Number
+                   th.sorting[style="width: 500px;"]
+                     | Address
+               tfoot
+                 tr
+                   th[rowspan="1" colspan="1"]
+                     | Name
+                   th[rowspan="1" colspan="1"]
+                     | Email
+                   th[rowspan="1" colspan="1"]
+                     | Full Name
+                   th[rowspan="1" colspan="1"]
+                     | Phone Number
+                   th.sorting[style="width: 300px;"]
+                     | Address
+               tbody
+               - @users.each do |user|
+                 tr
+                   td
+                     = user.user_name
+                   td
+                     = user.email
+                   td
+                     = user.full_name
+                   td
+                     = user.phone_number
+                   td
+                     = user.address
+         .col-sm-12.col-md-7
+              #dataTable_paginate.dataTables_paginate.paging_simple_numbers
+                = paginate @users 

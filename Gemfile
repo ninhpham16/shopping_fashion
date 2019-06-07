@@ -23,7 +23,7 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "font-awesome-sass", "~> 5.8.1"
-
+gem "faker"
 group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
