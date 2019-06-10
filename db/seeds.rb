@@ -38,5 +38,3 @@ admin = Admin.create!(user_name: "BinhPham",
                   description: description,
                   admin: admin)
 end
-
-product = Product.all
