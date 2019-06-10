@@ -35,19 +35,7 @@
                      | Phone Number
                    th.sorting[style="width: 300px;"]
                      | Address
-               tbody
-               - @users.each do |user|
-                 tr
-                   td
-                     = user.user_name
-                   td
-                     = user.email
-                   td
-                     = user.full_name
-                   td
-                     = user.phone_number
-                   td
-                     = user.address
+               = render "manager/users/users"
          .col-sm-12.col-md-7
               #dataTable_paginate.dataTables_paginate.paging_simple_numbers
                 = paginate @users 

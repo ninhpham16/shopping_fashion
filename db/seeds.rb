@@ -21,3 +21,8 @@ user = User.create!(user_name: "NinhPham",
               )
  end
 
+ admin = Admin.create!(user_name: "BinhPham",
+                       email: "binh@gmail.com",
+                       password: "123456",
+                       role: "admin")
+ 
