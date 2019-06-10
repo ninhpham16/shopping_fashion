@@ -3,7 +3,7 @@
 module Manager
   class ProductsController < Manager::BaseController
     def index
-      @products = Product.all.page(params[:page]).per(10)
+      @products = Product.page(params[:page])
     end
   end
 end

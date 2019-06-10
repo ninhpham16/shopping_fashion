@@ -38,18 +38,7 @@
                     th.sorting[style="width: 50px;"]
                       | Action                      
                 tbody
-                   tr
-                    td
-                      = product.name
-                    td
-                      = product.description
-                    td
-                      = product.price
-                    td
-                      = product.quantity
-                    td
-      button.btn.btn-primary type="button" Edit
-      button.btn.btn-danger type="button" Delete
+                  = render @products                  
             .col-sm-12.col-md-7
               #dataTable_paginate.dataTables_paginate.paging_simple_numbers
                 = paginate @products
