@@ -15,25 +15,13 @@
                   tr[role="row"]
                     th.sorting_asc[style="width: 280px;"]
                       | Name
-                    th.sorting[style="width: 1px;"]
+                    th.sorting[style="width: 300px;"]
                       | Email
                     th.sorting[style="width: 250px;"]
                       | Full Name
                     th.sorting[style="width: 50px;"]
                       | Phone Number
                     th.sorting[style="width: 500px;"]
-                      | Address
-                tfoot
-                  tr
-                    th[rowspan="1" colspan="1"]
-                      | Name
-                    th[rowspan="1" colspan="1"]
-                      | Email
-                    th[rowspan="1" colspan="1"]
-                      | Full Name
-                    th[rowspan="1" colspan="1"]
-                      | Phone Number
-                    th.sorting[style="width: 300px;"]
                       | Address
                 tbody
                   = render @users
