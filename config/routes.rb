@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :manager do
     root "static_pages#index"
     resources :users
+    resources :products
   end
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
