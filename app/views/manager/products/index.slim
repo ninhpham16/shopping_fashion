@@ -24,22 +24,9 @@
                     th.sorting[style="width: 1px;"]
                       | Quantity
                     th.sorting[style="width: 50px;"]
-                      | Action                      
-                tfoot
-                  tr
-                    th[rowspan="1" colspan="1"]
-                      | Name
-                    th[rowspan="1" colspan="1"]
-                      | Description
-                    th[rowspan="1" colspan="1"]
-                      | Price
-                    th[rowspan="1" colspan="1"]
-                      | Quantity
-                    th.sorting[style="width: 50px;"]
-                      | Action                      
+                      | Action                                        
                 tbody
                   = render @products                  
             .col-sm-12.col-md-7
               #dataTable_paginate.dataTables_paginate.paging_simple_numbers
                 = paginate @products
-                

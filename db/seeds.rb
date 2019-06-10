@@ -8,11 +8,11 @@ user = User.create!(user_name: "NinhPham",
              address: "Thai Binh"
             )
 
- 50.times do |n|
- user_name  = Faker::Name.name
+50.times do |n|
+  user_name  = Faker::Name.name
   email = "ex-#{n+1}@gmail.com"
- password = "123456"
- User.create!(user_name:  user_name,
+  password = "123456"
+  User.create!(user_name:  user_name,
               email: email,
               password: password,
               full_name: "Pham Ngoc Ninh",
@@ -32,10 +32,9 @@ admin = Admin.create!(user_name: "BinhPham",
   description = Faker::Lorem.sentence(10)
   admin = Admin.first
   Product.create!(name:  lname,
-               quantity: quantity,
-               price: price,
-               description: description,
-               admin: admin)
+                  quantity: quantity,
+                  price: price,
+                  description: description,
+                  admin: admin)
 end
-
 product = Product.all
