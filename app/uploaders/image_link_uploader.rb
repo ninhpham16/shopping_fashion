@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ImageLinkUploader < CarrierWave::Uploader::Base
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   include CarrierWave::MiniMagick
   process resize_to_fill: [230, 290]
