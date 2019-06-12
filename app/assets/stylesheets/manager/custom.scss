@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
 .sidebar .nav-item .nav-link span {
   font-size: 1.5rem;
 }
@@ -73,4 +74,11 @@ form.user {
     border-radius: 10rem;
     padding: 0.75rem 1rem;
   }
+}
+
+.tm-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
 }
