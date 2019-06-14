@@ -2,7 +2,6 @@
 
 module Manager
   class ProductsController < Manager::BaseController
-
     def index
       @products = Product.page(params[:page]).order(created_at: :desc)
     end

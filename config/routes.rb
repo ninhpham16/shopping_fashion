@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: "users/sessions"
   }, path: :users
-
   namespace :manager do
     root "static_pages#index"
     resources :users
-    resources :products 
+    resources :products
   end
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
