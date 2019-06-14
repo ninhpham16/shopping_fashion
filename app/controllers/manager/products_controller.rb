@@ -6,9 +6,7 @@ module Manager
       @products = Product.page(params[:page]).order(created_at: :desc)
     end
 
-    def show
-      @product_images = @product.product_images.all
-    end
+    def show; end
 
     def new
       @product = Product.new
@@ -16,8 +14,7 @@ module Manager
     end
 
     def create
-      product_data = product_params.merge(admin_id: current_admin.id)
-      @product = Product.new product_data
+      @product = Product.new product_params.merge(admin_id: current_admin.id)
       if @product.save
         params[:product][:images].each do |image|
           @product.images.create file: image
@@ -26,6 +23,27 @@ module Manager
       else
         render :new
       end
+    end
+
+    def edit
+      @product = Product.find(params[:id])
+    end
+
+    def update
+      @product = Product.find(params[:id])
+      if @product.update product_params
+        flash[:success] = "Products updated"
+        redirect_to manager_products_path
+      else
+        render :edit
+      end
+    end
+
+    def destroy
+      @product = Product.find(params[:id])
+      @product.destroy
+      flash[:success] = "Product Deleted"
+      redirect_to manager_products_path
     end
 
     private
