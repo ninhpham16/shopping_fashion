@@ -1700,7 +1700,7 @@ pre code {
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #e3e6f0;
+  border: 1px solid #36b9cc;
 }
 
 .table-bordered thead th,
@@ -8550,7 +8550,7 @@ button.bg-dark:focus {
 
 .mb-4,
 .my-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .ml-4,
@@ -10581,7 +10581,7 @@ a:focus {
 }
 
 #wrapper #content-wrapper {
-  background-color: #f8f9fc;
+  background-color: #fff;
   width: 100%;
   overflow-x: hidden;
 }
@@ -10818,7 +10818,12 @@ a:focus {
 }
 
 .text-gray-800 {
-  color: #5a5c69 !important;
+  color: #3F51B5 !important;
+  padding-top: 0px;
+  padding-bottom: 40px
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 40px 
 }
 
 .text-gray-900 {
@@ -10919,7 +10924,7 @@ a:focus {
 }
 
 .dropdown .dropdown-menu {
-  font-size: 0.85rem;
+  font-size: 1.5rem;
 }
 
 .dropdown .dropdown-menu .dropdown-header {
@@ -11134,7 +11139,7 @@ a:focus {
 }
 
 .sidebar .nav-item .nav-link span {
-  font-size: 0.65rem;
+  font-size: 1.5rem;
   display: block;
 }
 
@@ -11244,7 +11249,7 @@ a:focus {
 .sidebar .sidebar-brand {
   height: 4.375rem;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 800;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -11306,11 +11311,11 @@ a:focus {
     width: 14rem;
   }
   .sidebar .nav-item .nav-link i {
-    font-size: 0.85rem;
+    font-size: 1.25rem;
     margin-right: 0.25rem;
   }
   .sidebar .nav-item .nav-link span {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     display: inline;
   }
   .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
@@ -11584,6 +11589,7 @@ a:focus {
   position: relative;
   padding: 0.75rem 3.25rem 0.75rem 1.25rem;
 }
+
 
 .card .card-header[data-toggle="collapse"]::after {
   position: absolute;
@@ -12053,7 +12059,7 @@ footer.sticky-footer {
 
 footer.sticky-footer .copyright {
   line-height: 1;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 body.sidebar-toggled footer.sticky-footer {

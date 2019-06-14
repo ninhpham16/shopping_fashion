@@ -25,6 +25,8 @@ gem "jbuilder", "~> 2.5"
 gem "font-awesome-sass", "~> 5.8.1"
 gem "faker"
 gem "kaminari"
+gem "carrierwave"
+gem "mini_magick"
 
 group :development, :test do
   gem "pry-rails"
