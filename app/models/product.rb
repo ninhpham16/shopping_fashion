@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Product < ApplicationRecord
-  belongs_to :admin, optional: true
+  belongs_to :admin
   has_many :images, as: :imageable
 
   validates :name, presence: true
