@@ -50,7 +50,7 @@ module Manager
 
     def product_params
       params.require(:product).permit(:name, :description, :price, :quantity,
-                                      images_attributes: %i[file product_id])
+                                      images_attributes: %i[file product_id id])
     end
   end
 end

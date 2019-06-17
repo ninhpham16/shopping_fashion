@@ -32,11 +32,12 @@ body
                       .form-group.mb-3
                         = f.submit "Update Product Now",id: "btn-product", class: "btn btn-primary btn-block text-uppercase form-control"
                 .col-xl-6.col-lg-6.col-md-12.mx-auto.mb-4
-                  .tm-product-img-dummy.mx-auto
-                    i.fas.fa-cloud-upload-alt.tm-upload-icon onclick="document.getElementById('fileInput').click()"
                   = f.fields_for :images do |p| 
-                    .image-upload 
+                    .image-upload#photo-name
+                      = image_tag p.object.file_url
+                      = p.hidden_field :id
+                      = p.hidden_field :file_cache, id: "photo-name"
                       br
-                        label for="file-input" 
-                          span UPLOAD PRODUCT IMAGE
-                        = p.file_field :file, name: "product[images][]", id: "file-input", multiple: true
+                      label for="file-input" 
+                        span UPLOAD PRODUCT IMAGE
+                      = p.file_field :file, id: "file-input"

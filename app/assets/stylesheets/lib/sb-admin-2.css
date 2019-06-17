@@ -209,6 +209,13 @@ img {
   border-style: none;
 }
 
+.image-upload img{
+  width: 350px;
+  height: 245px;
+  padding-left: 100px;
+  padding-right: 0px;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
