@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190612015354) do
+ActiveRecord::Schema.define(version: 20190611081424) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20190612015354) do
     t.datetime "updated_at", null: false
     t.string "user_name"
     t.integer "role"
-    t.string "image"
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
