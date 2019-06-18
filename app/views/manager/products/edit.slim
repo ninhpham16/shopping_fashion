@@ -29,8 +29,8 @@ body
                         label for="name" 
                           | Quantity
                         = f.number_field :quantity, id: "form-control-name", class: "form-control"
-                      .image-upload#photo-name
-                        = image_tag (@product.images.last.file_url if @product.images.presence)
+                      .image-upload#photo_image
+                        = image_tag("defaul.png")
                         label for="file_input" 
                           span ADD NEW IMAGE
                         = f.file_field :file, name: "product[images][]", id: "file_input", multiple: true
