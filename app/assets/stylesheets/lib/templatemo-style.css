@@ -67,7 +67,7 @@ button:focus {
   padding: 40px;
   -webkit-box-shadow: 1px 1px 5px 0 #455c71;
   -moz-box-shadow: 1px 1px 5px 0 #455c71;
-  box-shadow: 2px 2px 30px 0 #FF9800;;
+  box-shadow: 2px 2px 30px 0 #7b7264;
   min-height: 350px;
   height: 100%;
   max-height: 450px;
@@ -290,7 +290,7 @@ thead {
   box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
 }
 .form-group label {
-  color: #101010;
+  color: #3F51B5;
   margin-bottom: 10px;
 }
 .tm-hide-sm {
@@ -717,9 +717,12 @@ input[type="checkbox"]:focus {
 
 .image-upload > label{
   cursor:pointer;
-  color: #607D8B ;
-  padding: 5px 144px;
-  border: solid;
+  color: #e74a3b;
+  padding: 5px 170px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 492px
+  border-style: solid;
 }
 
 .mx-auto.mb-4 {
@@ -741,8 +744,10 @@ input[type="file"] {
   background: #ffeb3b82;
   color: #0c0c0c;
   font-family: cursive;
+  border: 2px solid #fff;
+  border-radius: 5px;
   font-weight: bolder;
-
+  width: 483px;
 }
 
 #form-control-name {
@@ -755,7 +760,7 @@ input[type="file"] {
   color: #0e0e0e;
   background-color: #fff;
   background-image: none;
-  border: 2px solid #1cc88a;
+  border: 2px solid #303240;
   border-radius: 4px;
 }
 
@@ -771,13 +776,13 @@ body {
 }
 
 h1 {
-    font-size: 20px;
-    text-align: center;
-    margin: 20px 0 20px;
-    small {
-        display: block;
-        font-size: 15px;
-        padding-top: 8px;
-        color: gray;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 20px;
+  small {
+    display: block;
+    font-size: 15px;
+    padding-top: 8px;
+    color: gray;
     }
 }

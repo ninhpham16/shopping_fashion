@@ -19,7 +19,8 @@ module Manager
         params[:product][:images].each do |image|
           @product.images.create file: image
         end
-        redirect_to manager_products_path, notice: "Product was successfully created."
+        flash[:success] = "Product was successfully created."
+        redirect_to manager_products_path
       else
         render :new
       end
@@ -32,6 +33,11 @@ module Manager
     def update
       @product = Product.find(params[:id])
       if @product.update product_params
+        if params.dig(:product, :images)
+          params[:product][:images].each do |image|
+            @product.images.create file: image
+          end
+        end
         flash[:success] = "Products updated"
         redirect_to manager_products_path
       else
