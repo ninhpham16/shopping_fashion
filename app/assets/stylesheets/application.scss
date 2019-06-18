@@ -9,16 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *= require_self
  *= require custom
+ *= require lib/sb-user-2
+ *= require_self
  */
-
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import "custom.scss";
-@import "bootstrap";
-@import "lib/sb-user-2";
-@import "lib/owl.carousel.min";
-@import "lib/style";
-@import "lib/css";
-@import "lib/bootstrap.min";

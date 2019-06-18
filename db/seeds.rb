@@ -1,4 +1,4 @@
-#puts 'create users'
+puts 'create users'
 user = User.create!(user_name: "NinhPham",
                     email: "ninhpham@gmail.com",
                     password:    "123456",
