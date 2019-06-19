@@ -2,6 +2,7 @@
 
 module Manager
   class ProductsController < Manager::BaseController
+    before_action :find_id, only: %i[edit update destroy]
     def index
       @products = Product.page(params[:page]).order(created_at: :desc)
     end
@@ -21,17 +22,15 @@ module Manager
         end
         flash[:success] = "Product was successfully created."
         redirect_to manager_products_path
+
       else
         render :new
       end
     end
 
-    def edit
-      @product = Product.find(params[:id])
-    end
+    def edit; end
 
     def update
-      @product = Product.find(params[:id])
       if @product.update product_params
         if params.dig(:product, :images)
           params[:product][:images].each do |image|
@@ -46,13 +45,16 @@ module Manager
     end
 
     def destroy
-      @product = Product.find(params[:id])
       @product.destroy
       flash[:success] = "Product Deleted"
       redirect_to manager_products_path
     end
 
     private
+
+    def find_id
+      @product = Product.find(params[:id])
+    end
 
     def product_params
       params.require(:product).permit(:name, :description, :price, :quantity,

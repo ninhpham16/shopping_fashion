@@ -742,7 +742,7 @@ input[type="file"] {
 
 #btn-product {
   background: #ffeb3b82;
-  color: #0c0c0c;
+  color: #ffff;
   font-family: cursive;
   border: 2px solid #fff;
   border-radius: 5px;
@@ -760,7 +760,7 @@ input[type="file"] {
   color: #0e0e0e;
   background-color: #fff;
   background-image: none;
-  border: 2px solid #303240;
+  border: 2px solid #898b98;
   border-radius: 4px;
 }
 

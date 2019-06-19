@@ -30,7 +30,7 @@ body
                           | Quantity
                         = f.number_field :quantity, id: "form-control-name", class: "form-control"
                       .form-group.mb-3
-                        = f.submit "Add Product Now",id: "btn-product", class: "btn btn-primary btn-block text-uppercase form-control"
+                        = f.submit "Add Product Now",id: "btn-product", class: "btn btn-primary btn-block buton text-uppercase form-control"
                 .col-xl-6.col-lg-6.col-md-12.mx-auto.mb-4
                   .tm-product-img-dummy.mx-auto
                     i.fas.fa-cloud-upload-alt.tm-upload-icon onclick="document.getElementById('fileInput').click()"
@@ -38,5 +38,5 @@ body
                     .image-upload 
                       br
                         label for="file-input" 
-                          span UPLOAD PRODUCT IMAGE
+                          span UPLOAD IMAGE
                         = p.file_field :file, name: "product[images][]", id: "file-input", multiple: true
