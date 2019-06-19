@@ -1,0 +1,72 @@
+<div class="breadcrumb-area gray-bg">
+  <div class="container">
+    <div class="breadcrumb-content">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active">Profile</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <div class="container box_1620">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="banner_content">
+        <div class="media">
+          <div class="media-body">
+            <div class="personal_text">
+              <h3><%= @user.user_name %></h3>
+              <p>Welcome</p><hr>
+              <ul class="list basic_info">
+                <li><a><i class="fa fa-phone-square"></i>
+                  <% if current_user.profile.fullname? %>
+                    <%= current_user.profile.fullname %>
+                  <% else %>
+                    <%= p ""%>
+                  <% end %></a></li>  
+                <li><a><i class="fa fa-envelope"></i>
+                  <% if current_user.email? %>
+                    <%= current_user.email %>
+                  <% else %>
+                    <%= p ""%>
+                  <% end %>
+                <li><a><i class="fa fa-phone-square"></i>
+                  <% if current_user.profile.phone? %>
+                    <%= current_user.profile.phone %>
+                  <% else %>
+                    <%= p ""%>
+                  <% end %></a></li>
+                </a></li>
+                <li><a><i class="fa fa-home"></i>
+                  <% if current_user.profile.address? %>
+                    <%= current_user.profile.address %>
+                  <% else %>
+                    <%= p ""%>
+                  <% end %>
+                </a></li>
+              </ul>
+              <ul class="list personal_social">
+                <li>
+                  <%= link_to @profile.facebook, target: "blank" do %>
+                    <i class="fa fa-facebook"></i>
+                  <% end %>
+                </li>
+              </ul><hr>
+              <ul class="change_profile">
+                Click
+                <%= link_to "Here", edit_users_profile_path(current_user) %>
+                to change profile
+                <i class="fa fa-smile-o" aria-hidden="true"></i>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="foo">
+          <span class="letter" data-letter="H" style="color: black" >F</span>
+          <span class="letter" data-letter="E" style="color: black" >U</span>
+          <span class="letter" data-letter="L" style="color: red" >D</span>
+          <span class="letter" data-letter="L" style="color: red" >I</span>
+          <span class="letter" data-letter="O" style="color: red" >N</span>
+        </div>
+      </div>
+    </div>
+  </div>

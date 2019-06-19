@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     resources :users
     resources :products
   end
+
+  namespace :users do
+    resources :profiles
+  end
   devise_for :admins, controllers: {
     sessions: "manager/sessions"
   }, path: :manager
