@@ -2,7 +2,7 @@
 
 module Manager
   class ProductsController < Manager::BaseController
-    before_action :find_id, only: %i[edit update destroy]
+    before_action :load_product, only: %i[edit update destroy]
     def index
       @products = Product.page(params[:page]).order(created_at: :desc)
     end
@@ -52,7 +52,7 @@ module Manager
 
     private
 
-    def find_id
+    def load_product
       @product = Product.find(params[:id])
     end
 
