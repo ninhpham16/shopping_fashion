@@ -1,6 +1,35 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :find_user, only:[:show, :edit, :update]
+  
+  def show    
+  end
 
-  def show
+  def edit
+  end
+
+  def update
+    if @user.update user_params
+      bypass_sign_in(@user)
+      flash[:success] = "Profile updated"
+      redirect_to root_url
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def user_params
+    if params[:user][:password].blank?
+      params.require(:user).permit(:full_name, :phone_number, :email, :address)
+    else
+      params.require(:user).permit(:full_name, :phone_number, :email, :address, :password,
+                                   :password_confirmation)
+    end
+  end
+
+  def find_user
     @user = User.find_by(id: params[:id])
   end
 end
