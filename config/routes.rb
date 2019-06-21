@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     delete "/logout" => "devise/sessions#destroy", :as => :destroy_user_session
     get "/register" => "devise/registrations#new", :as => :new_user_registration
     post "/register" => "devise/registrations#create", :as => :user_registration
-    resources :users
   end
 
   namespace :manager do
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
     resources :users
     resources :products
   end
+
+  resources :users, only: %i[show edit update]
 
   devise_for :admins, controllers: {
     sessions: "manager/sessions"

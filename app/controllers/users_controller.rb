@@ -1,16 +1,15 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_user, only:[:show, :edit, :update]
-  
-  def show    
-  end
 
-  def edit
-  end
+  def show; end
+
+  def edit; end
 
   def update
-    if @user.update user_params
-      bypass_sign_in(@user)
+    if current_user.update user_params
+      bypass_sign_in(current_user)
       flash[:success] = "Profile updated"
       redirect_to root_url
     else
@@ -27,9 +26,5 @@ class UsersController < ApplicationController
       params.require(:user).permit(:full_name, :phone_number, :email, :address, :password,
                                    :password_confirmation)
     end
-  end
-
-  def find_user
-    @user = User.find_by(id: params[:id])
   end
 end

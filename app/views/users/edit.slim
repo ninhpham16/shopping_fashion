@@ -3,7 +3,7 @@
   hr/
   .row
     .col-md-3
-    = form_for @user, url: user_path(current_user) do |f|
+    = form_for current_user , url: user_path(current_user) do |f|
       = render "users/shared/error_messages", object: f.object
       .col-md-9.personal-info
         .form-group.col-md-12
