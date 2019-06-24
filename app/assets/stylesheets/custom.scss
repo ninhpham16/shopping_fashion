@@ -439,7 +439,7 @@ li a.active {
 .address{
   width: 680px !important;
 }
-<<<<<<< HEAD
+
 .button{
     border-color: #2c2f34;
     border-radius: 3px;
@@ -494,4 +494,8 @@ li a.active {
 
 .widget ul.product_list_widget li .star-rating {
   display: table-row-group !important;
+}
+
+.table-responsive {
+  overflow-x: unset;
 }
