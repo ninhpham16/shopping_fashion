@@ -14,6 +14,16 @@ user = User.create!(user_name: "NinhPham",
                     address: "Thai Binh"
                     )
 
+ puts 'create users'
+ user = User.create!(user_name: "NinhPham",
+                     email: "ninhpham@gmail.com",
+                     password:    "123456",
+                     password_confirmation: "123456",
+                     full_name: "Georgio Armani",
+                     phone_number: "0964980884",
+                     address: "Thai Binh"
+                    )
+
 100.times do |n|
   user_name  = Faker::Name.name
   email = "ex-#{n+1}@gmail.com"
