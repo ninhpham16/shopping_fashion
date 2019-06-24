@@ -16,8 +16,6 @@ Rails.application.routes.draw do
     resources :products
     resources :orders, except: %i[new create]
 
-  end
-
   resources :users, only: %i[show edit update]
 
   devise_for :admins, controllers: {
