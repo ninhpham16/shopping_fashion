@@ -3,7 +3,7 @@
 module Manager
   class OrdersController < Manager::BaseController
     def index
-      @orders = Order.page(params[:page])
+      @orders = Order.all.page(params[:page])
     end
   end
 end
