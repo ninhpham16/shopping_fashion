@@ -2,7 +2,6 @@
 
 class Order < ApplicationRecord
   enum status: %i[Pending Ordered Closed Complete]
-
   belongs_to :user
 
   has_many :order_items
