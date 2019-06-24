@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Order < ApplicationRecord
-
   enum status: %i[Pending Ordered Closed Complete]
 
   belongs_to :user
