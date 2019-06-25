@@ -21,7 +21,7 @@ row
           th.sorting[style="width: 50px;"]
             | Status
       tbody 
-        = render "manager/orders/order", orders: @orders
+        = render @orders
   .col-sm-12.col-md-7
           #dataTable_paginate.dataTables_paginate.paging_simple_numbers
             = paginate @orders
