@@ -1,18 +1,10 @@
 table.shop_table.woocommerce-checkout-review-order-table
-  thead
+  thead.order-product-total
     tr.Product-Total
       th.product-name Product
       th.product-total Total
-  - @order.order_items.each do |order_items|
-    tbody.table-order
-      tr.cart_item
-        td.product-name
-          h4= order_items.product.name
-          h6
-            | Qty: #{order_items.quantity}
-        td.product-total
-          span.woocommerce-Price-amount.amount
-            = number_to_currency(order_items.product.price)
+    tbody.table-order 
+      = render partial: "order_items", collection: @order.order_items, as: :order_items
   tr.order-total
     th.total-price Total
     td.subtotal

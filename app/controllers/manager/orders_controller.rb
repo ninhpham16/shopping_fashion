@@ -13,8 +13,7 @@ module Manager
     def destroy
       @order = Order.find(params[:id])
       @order.destroy
-      flash[:success] = "Order Deleted"
-      redirect_to manager_orders_path
+      redirect_to manager_orders_path, success: "Order Deleted"
     end
   end
 end

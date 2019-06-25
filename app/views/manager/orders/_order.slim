@@ -15,8 +15,5 @@ tr.odd role="row"
       .form-group
         = f.select :status, Order.statuses.keys , {}, class: "sel", id:"status-btn", data: {value: f.object.status}
   td
-    = link_to manager_order_path(order), class: "btn btn-danger mr-5" do
-      span  Detail 
-    = link_to manager_order_path(order), method: :delete, class: "btn btn-primary", data: {confirm: "Are You Sure ?"} do
-      span Delete
-
+    = link_to "Detail", manager_order_path(order), class: "btn btn-danger mr-5"
+    = link_to "Delete", manager_order_path(order), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary"
