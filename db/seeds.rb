@@ -13,7 +13,6 @@ user = User.create!(user_name: "NinhPham",
                     phone_number: "0964980884",
                     address: "Thai Binh"
                     )
-
 100.times do |n|
   user_name  = Faker::Name.name
   email = "ex-#{n+1}@gmail.com"
@@ -37,11 +36,12 @@ end
                address: address,
                phone_number:  phone_number,
                status: status)
-  end 
+end 
+
 100.times do |n|
   lname  = Faker::Name.name
   quantity = Faker::Number.between(1, 10)
-  price = Faker::Number.between(1, 10000)
+  price = Faker::Number.between(1, 1000)
   description = Faker::Lorem.sentence(10)
   admin = Admin.first
   Product.create!(name:  lname,
@@ -50,10 +50,20 @@ end
                   description: description,
                   admin: admin)
 end
+
 orders = Order.order(:created_at).take(6)
 30.times do |n|
   quantity = Faker::Number.between(1, 10)
   product = 1
   orders.each { |order| order.order_items.create!(quantity: quantity, product_id: product) } 
-  end
+end
 
+10.times do |n|
+  id = [310..350]
+  order = Order.first
+  productid = Faker::Number.between(1, 100)
+  quantity = Faker::Number.between(1, 10)
+  order.order_items.create!(id: id,
+                           product_id: productid,
+                           quantity: quantity)
+end
