@@ -22,7 +22,6 @@ module Manager
         end
         flash[:success] = "Product was successfully created."
         redirect_to manager_products_path
-
       else
         render :new
       end
@@ -38,7 +37,7 @@ module Manager
           end
         end
         flash[:success] = "Products updated"
-        redirect_to manager_products_path
+        redirect_to edit_manager_product_path
       else
         render :edit
       end
