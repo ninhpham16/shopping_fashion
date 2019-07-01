@@ -1,4 +1,3 @@
-
 puts 'create users'
 admin = Admin.create!(user_name: "BinhPham",
                      email: "binh@gmail.com",
@@ -13,6 +12,7 @@ user = User.create!(user_name: "NinhPham",
                     phone_number: "0964980884",
                     address: "Thai Binh"
                     )
+
 100.times do |n|
   user_name  = Faker::Name.name
   email = "ex-#{n+1}@gmail.com"
