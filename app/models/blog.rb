@@ -4,5 +4,5 @@ class Blog < ApplicationRecord
   belongs_to :admin
   has_many :images
 
-  validates :content, precences: true
+  validates :content, presence: true
 end
