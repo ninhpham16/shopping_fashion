@@ -58,3 +58,10 @@ orders = Order.order(:created_at).take(6)
   productid = Faker::Number.between(1, 15)
   orders.each { |order| order.order_items.create!(quantity: quantity, product_id: productid) } 
 end
+
+admins = Admin.all
+30.times do |n|
+  title = Faker::Lorem.sentence(10)
+  content = Faker::Lorem.sentence(100)
+  admins.each {|admin| admin.blogs.create!(title: title, content: content)}
+end
