@@ -48,6 +48,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     builder (3.2.3)
+    cancancan (2.3.0)
     carrierwave (1.2.2)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -318,7 +319,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.4.1)
-  cancan
+  cancancan (~> 2.0)
   carrierwave
   ckeditor
   coffee-rails (~> 4.2)
