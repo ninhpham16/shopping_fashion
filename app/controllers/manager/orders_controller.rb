@@ -3,6 +3,7 @@
 module Manager
   class OrdersController < Manager::BaseController
     before_action :load_order, only: %i[show edit update destroy]
+    before_action :check_admin, except: [:index]
 
     def index
       @orders = Order.page(params[:page]).order(created_at: :desc)

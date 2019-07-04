@@ -32,6 +32,7 @@ gem "ransack"
 gem "friendly_id", "~> 5.2.4"
 gem "magnific-popup-rails", "~> 1.1.0"
 gem "config"
+gem "ckeditor"
 group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"

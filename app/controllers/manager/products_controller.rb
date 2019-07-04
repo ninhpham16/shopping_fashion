@@ -3,6 +3,7 @@
 module Manager
   class ProductsController < Manager::BaseController
     before_action :load_product, only: %i[edit update destroy]
+    before_action :check_admin, except: [:index]
     def index
       @products = Product.page(params[:page]).order(created_at: :desc)
     end

@@ -1,5 +1,11 @@
-tr.odd role="row" 
+tr
   td
     = blog.title
+  td
+    = blog.description
   td 
-    = blog.content
+    = raw blog.content
+  td 
+    = image_tag (blog.image if blog.image.presence) || "/assets/user.png", size: "50", alt: "Edit Entry"
+  td 
+ 

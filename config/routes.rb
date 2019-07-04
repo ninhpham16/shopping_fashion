@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => "/ckeditor"
   devise_for :users, skip: :all
   as :user do
     get "/login" => "devise/sessions#new", :as => :new_user_session
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
     resources :users
     resources :products
     resources :orders, except: %i[new create]
-    resources :blogs
+    resources :blogs, only: %i[index new create]
   end
 
   resources :users, only: %i[show edit update]
