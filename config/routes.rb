@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :users
     resources :products
     resources :orders, except: %i[new create]
+    resources :reviews
+    resources :comments
     resources :blogs
   end
 

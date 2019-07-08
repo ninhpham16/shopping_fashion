@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Ability
   include CanCan::Ability
 
@@ -6,7 +8,7 @@ class Ability
     if admin.admin?
       can :manage, :all
     elsif admin.contributor?
-      can :manage, Blog
+      can [:create, :edit, :index] , Blog
     end
   end
 end

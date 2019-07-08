@@ -2,8 +2,8 @@
 
 module Manager
   class BlogsController < Manager::BaseController
-
-    before_action :load_blog, only: [:edit, :update, :destroy]
+    before_action :load_blog, only: %i[edit update destroy]
+    load_and_authorize_resource
 
     def index
       @blogs = Blog.page(params[:page]).order(created_at: :desc)
@@ -23,7 +23,7 @@ module Manager
       end
     end
 
-    def edit;end
+    def edit; end
 
     def update
       if @blog.update(params[:blog].permit(:title, :content, :image, :description))
@@ -34,9 +34,8 @@ module Manager
     end
 
     def destroy
-      @blog = Blog.find(params[:id])
       if @blog.destroy
-       redirect_to manager_blogs_path, success: "Blog was destroyed!"
+        redirect_to manager_blogs_path, success: "Blog was destroyed!" 
       end
     end
 
